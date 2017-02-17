@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- 引用Vue -->
+    <script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!--view-->
+<div id="app">
+
+    <nav>
+        <ul class="first">API
+            <li class="second"> <a v-on:click="onClick1">对象1</a></li>
+            <li class="second"><a v-on:click="onClick2">对象2</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h3>{{name}}</h3>
+        <div>
+            <p>{{tag}}</p>
+            <p>{{title}}</p>
+            <ol class="membs">
+                <li id="fun" v-for="member in mems">
+                    <p>{{member.name}}</p>
+                    <p><span id="stress">{{member.pname}}</span>{{member.ptag}}</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+</div>
+
+<script lang="JavaScript" src="vueBind.js"></script>
+<script lang="JavaScript">
+    new Vue(app);
+</script>
+
+</html>
